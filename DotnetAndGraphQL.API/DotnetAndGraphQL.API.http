@@ -1,0 +1,6 @@
+@DotnetAndGraphQL.API_HostAddress = http://localhost:5063
+
+GET {{DotnetAndGraphQL.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
