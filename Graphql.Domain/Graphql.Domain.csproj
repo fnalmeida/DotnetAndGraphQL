@@ -16,8 +16,4 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\AspireApp\AspireApp.AppHost\AspireApp.AppHost.csproj" />
-  </ItemGroup>
-
 </Project>

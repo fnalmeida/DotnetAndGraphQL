@@ -1,0 +1,6 @@
+@AspireApp.GraphqlApi_HostAddress = http://localhost:5154
+
+GET {{AspireApp.GraphqlApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
