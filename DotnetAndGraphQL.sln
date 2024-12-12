@@ -21,8 +21,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspireApp.GraphqlApi", "Asp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Graphql.Domain", "Graphql.Domain\Graphql.Domain.csproj", "{04E1F46D-6C8B-4496-83C3-E5271B47C140}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotnetAndGraphQL.API", "DotnetAndGraphQL.API\DotnetAndGraphQL.API.csproj", "{EE874121-32A9-4AAC-A6BE-7AE54AB54C38}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,10 +51,6 @@ Global
 		{04E1F46D-6C8B-4496-83C3-E5271B47C140}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04E1F46D-6C8B-4496-83C3-E5271B47C140}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{04E1F46D-6C8B-4496-83C3-E5271B47C140}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EE874121-32A9-4AAC-A6BE-7AE54AB54C38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EE874121-32A9-4AAC-A6BE-7AE54AB54C38}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EE874121-32A9-4AAC-A6BE-7AE54AB54C38}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EE874121-32A9-4AAC-A6BE-7AE54AB54C38}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -68,7 +62,6 @@ Global
 		{4D29354B-4767-4D11-9FB0-19017CB6C213} = {53B42C05-E3EF-489C-907C-EE3AC7AF4A4B}
 		{5433FA21-3E75-4A3C-80AF-7440BB10E2AD} = {53B42C05-E3EF-489C-907C-EE3AC7AF4A4B}
 		{04E1F46D-6C8B-4496-83C3-E5271B47C140} = {BE784491-8AED-48AA-B193-91CF732B92AE}
-		{EE874121-32A9-4AAC-A6BE-7AE54AB54C38} = {53B42C05-E3EF-489C-907C-EE3AC7AF4A4B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3DE48F3A-C88F-4C4E-8356-8601D86800F4}

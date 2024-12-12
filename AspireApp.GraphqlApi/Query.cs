@@ -10,6 +10,7 @@ namespace DotnetAndGraphQL.Domain
 {
     public class Query
     {
+        [UseOffsetPaging(IncludeTotalCount = true)]
         [UseProjection]
         [UseFiltering]
         [UseSorting]

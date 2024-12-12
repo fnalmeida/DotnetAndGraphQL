@@ -21,8 +21,6 @@ builder.Services.AddGraphQLServer().AddQueryType<Query>()
 
 builder.Services.AddControllers();
 
-
-
 var app = builder.Build();
 
 app.MapDefaultEndpoints();

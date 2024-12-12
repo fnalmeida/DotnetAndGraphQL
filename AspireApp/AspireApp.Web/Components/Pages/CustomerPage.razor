@@ -1,0 +1,76 @@
+﻿@page "/customer"
+@using System.Text.Json
+@attribute [StreamRendering(true)]
+@attribute [OutputCache(Duration = 5)]
+
+@inject GraphQLClient _graphQLClient
+
+<PageTitle>Customer</PageTitle>
+
+<h1>Customer</h1>
+
+<p>This component demonstrates showing data loaded from a backend API service.</p>
+
+@if (customers == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Temp. (C)</th>
+                <th>Temp. (F)</th>
+                <th>Summary</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var customer in customers)
+            {
+                <tr>
+                    <td>@customer.CustomerID</td>
+                    <td>@customer.FirstName</td>
+                    <td>@customer.Birth</td>
+                    <td>@customer.Document</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private List<Customer> customers;
+    private CancellationTokenSource _cancellationTokenSource = new CancellationTokenSource();
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        var query = @"query Customers {
+                    customers(skip: 0, take: 50) {
+                        items {
+                            customerID
+                            firstName
+                            birth
+                            document
+                        }
+                    }
+                }
+                ";
+
+
+        var json = await _graphQLClient.ExecuteQueryAsync(query, _cancellationTokenSource.Token);
+        Data data = JsonSerializer.Deserialize<Data>(json, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+        customers = data.Customers.Items;
+        
+    }
+        
+}
+
+    public void Dispose()
+    {
+        _cancellationTokenSource.Cancel();
+        _cancellationTokenSource.Dispose();
+    }
+}
